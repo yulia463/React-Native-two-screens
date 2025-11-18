@@ -1,45 +1,22 @@
-import { Image } from 'expo-image';
-import {Platform, StyleSheet, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import {COLORS} from "@/styles/theme";
 
-import { Collapsible } from '@/components/ui/collapsible';
-import { ExternalLink } from '@/components/external-link';
-
-export default function TabTwoScreen() {
-  return (
-      <View>
-      <Collapsible title="File-based routing">
-
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
-
-      </Collapsible>
-      <Collapsible title="Images">
-
-        <Image
-          source={require('@/assets/images/react-logo.png')}
-          style={{ width: 100, height: 100, alignSelf: 'center' }}
-        />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-        </ExternalLink>
-      </Collapsible>
-      <Collapsible title="Light and dark mode components">
-
-      </Collapsible>
-      </View>
-  );
+export default function PaymentsScreen() {
+    return (
+        <View style={styles.container}>
+            <Text style={styles.title}>PaymentsScreen</Text>
+        </View>
+    );
 }
-
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
-  },
-  titleContainer: {
-    flexDirection: 'row',
-    gap: 8,
-  },
+    container: {
+        flex: 1,
+        backgroundColor: COLORS.yellowLight,
+        padding: 20,
+        justifyContent: 'center',
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: '600',
+    },
 });
