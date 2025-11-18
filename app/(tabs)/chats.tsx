@@ -1,18 +1,17 @@
-import { View, Text, StyleSheet } from 'react-native';
+import {StyleSheet, Text, View} from "react-native";
 import {COLORS} from "@/styles/theme";
 
-export default function MainScreen() {
+export default function ChatsScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Главный экран</Text>
+            <Text style={styles.title}>ChatsScreen</Text>
         </View>
     );
 }
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: COLORS.error,
+        backgroundColor: COLORS.yellowMid,
         padding: 20,
         justifyContent: 'center',
     },
