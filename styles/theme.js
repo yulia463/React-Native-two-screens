@@ -11,6 +11,7 @@ export const COLORS = {
     yellowMid: '#FE5900',
     yellowLightMid: '#FF9332',
     yellowLight: '#FFD8A5',
+    whiteColor:"#FFF",
 };
 
 export const SIZES = {
