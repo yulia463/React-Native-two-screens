@@ -2,8 +2,7 @@ import {Tabs} from 'expo-router';
 import React from 'react';
 
 import {HapticTab} from '@/components/haptic-tab';
-import {IconSymbol} from '@/components/ui/icon-symbol';
-import {Colors} from '@/constants/theme';
+import {COLORS} from '@/styles/theme';
 import {useColorScheme} from '@/hooks/use-color-scheme';
 import {Ionicons} from "@expo/vector-icons";
 
@@ -13,8 +12,9 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
+          tabBarActiveTintColor: COLORS.yellowMid,
+          tabBarInactiveTintColor: COLORS.whiteColor,
+          headerShown: false,
         tabBarButton: HapticTab,
       }}>
       <Tabs.Screen
@@ -28,7 +28,7 @@ export default function TabLayout() {
         name="explore"
         options={{
             title: 'Payments',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="arrow.up.arrow.down.circle.fill" color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="swap-horizontal" color={color} />,
         }}
       />
         <Tabs.Screen
@@ -42,7 +42,7 @@ export default function TabLayout() {
             name="analytics"
             options={{
                 title: 'Analytics',
-                tabBarIcon: ({color}) => <IconSymbol size={28} name="chart.bar.fill" color={color}/>,
+                tabBarIcon: ({color}) => <Ionicons size={28} name="pie-chart" color={color}/>,
             }}
         />
         <Tabs.Screen
